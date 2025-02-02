@@ -1,27 +1,52 @@
-# disk_usage_analyzer
+# Disk Usage Analyzer
 
-TODO: Write a description here
+A terminal utility written in Crystal for analyzing disk usage in a directory, listing the largest files and directories.
+
+## Features
+- Scans directories recursively
+- Shows file and directory sizes in human-readable format
+- Customizable number of results to display
+- Sorts results by size in descending order
 
 ## Installation
 
-TODO: Write installation instructions here
+First, make sure you have [Crystal](https://crystal-lang.org/install/) installed on your system.
+
+Then compile the project:
+
+```bash
+crystal build src/disk_usage_analyzer.cr --release
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Basic syntax:
+```bash
+./disk_usage_analyzer <directory> [top_n]
+```
 
-## Development
+Parameters:
+- `<directory>`: The directory you want to analyze
+- `[top_n]`: (Optional) Number of entries to display (default: 10)
 
-TODO: Write development instructions here
+### Example
 
-## Contributing
+To display the 5 largest items in your home directory:
 
-1. Fork it (<https://github.com/your-github-user/disk_usage_analyzer/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+```bash
+./disk_usage_analyzer /home/user 5
+```
 
-## Contributors
+Sample output:
+```
+Top 5 largest space consumers in '/home/user':
+1. /home/user/videos - 15 GB
+2. /home/user/downloads - 10 GB
+3. /home/user/documents - 5 GB
+4. /home/user/music - 2 GB
+5. /home/user/pictures - 1 GB
+```
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+## Requirements
+
+- [Crystal](https://crystal-lang.org/install/) programming language
