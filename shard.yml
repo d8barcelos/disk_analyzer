@@ -1,0 +1,13 @@
+name: disk_usage_analyzer
+version: 0.1.0
+
+authors:
+  - your-name-here <your-email-here>
+
+targets:
+  disk_usage_analyzer:
+    main: src/disk_usage_analyzer.cr
+
+crystal: '>= 1.15.0'
+
+license: MIT
